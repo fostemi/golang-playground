@@ -13,11 +13,24 @@ type movie struct {
   ID string `json:"id"`
   Title string `json:"title"`
   Year int `json:"year"`
-  Rating string `json:"rating"`
+  Rating rating `json:"rating"`
 }
 
+type rating struct {
+  Website string `json:"website"`
+  Rated int `json:"rating"`
+}
+
+// var movieRating = rating {Website: "Rotten Tomatoes", Rated: 72}
 var movies = []movie {
-  {ID: "1", Title: "Caddy Shack", Year: 1980, Rating: "Rotten Tomatoes: 72%"},
+  {
+    ID: "1",
+    Title: "Caddy Shack",
+    Year: 1980,
+    Rating: rating {
+      Website: "Rotten Tomatoes", Rated: 72,
+    },
+  },
 }
 
 func getMovies(c *gin.Context) {
