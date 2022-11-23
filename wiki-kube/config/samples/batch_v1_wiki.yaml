@@ -1,0 +1,6 @@
+apiVersion: batch.wiki.kubebuilder.io/v1
+kind: Wiki
+metadata:
+  name: wiki-sample
+spec:
+  # TODO(user): Add fields here

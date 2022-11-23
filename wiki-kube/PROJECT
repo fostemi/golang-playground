@@ -1,0 +1,16 @@
+domain: wiki.kubebuilder.io
+layout:
+- go.kubebuilder.io/v3
+projectName: wiki-kube
+repo: wiki.kubebuilder.io/pages
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wiki.kubebuilder.io
+  group: batch
+  kind: Wiki
+  path: wiki.kubebuilder.io/pages/api/v1
+  version: v1
+version: "3"
