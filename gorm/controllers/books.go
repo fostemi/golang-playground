@@ -1,18 +1,16 @@
-
 package controllers
 
 import (
-  "net/http"
+	"net/http"
 
-  "github.com/gin-gonic/gin"
-  "github.com/fostemi/go-learning/gorm/models"
+	"github.com/fostemi/golang-playground/example/gorm"
+	"github.com/gin-gonic/gin"
 )
 
 // GET /books
 func FindBooks(c *gin.Context) {
-  var books []models.Book
-  models.DB.Find(&books)
+	var books []models.Book
+	models.DB.Find(&books)
 
-  c.JSON(http.StatusOK, gin.H{"data": books})
+	c.JSON(http.StatusOK, gin.H{"data": books})
 }
-
